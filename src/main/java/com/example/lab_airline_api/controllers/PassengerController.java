@@ -26,13 +26,13 @@ public class PassengerController {
 //Get all passengers
     @GetMapping
     public ResponseEntity<List<Passenger>> getAllPassengers(){
-        return new ResponseEntity(passengerRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity(passengerService.findAllPassengers(), HttpStatus.OK);
     }
 
     //Get a single passenger
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Passenger>> getPassenger(@PathVariable Long id){
-        return new ResponseEntity(passengerRepository.findById(id), HttpStatus.OK);
+        return new ResponseEntity(passengerService.findPassenger(id), HttpStatus.OK);
     }
 
 //create a passenger

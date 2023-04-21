@@ -40,7 +40,7 @@ public class FlightService {
         return flightRepository.findById(id).get();
     }
 
-    public List<Flight> findAllChocolates(){
+    public List<Flight> findAllFlights(){
         return flightRepository.findAll();
     }
 
